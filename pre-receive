@@ -1,0 +1,9 @@
+#!/bin/sh
+
+echo "This pre-commit is testing for shellcheck errors of any added files."
+shellcheck *.bash
+    if [ $? -ne 0 ] ; then
+        exit 1
+    else
+        echo "\nShellcheck found no errors"
+    fi
