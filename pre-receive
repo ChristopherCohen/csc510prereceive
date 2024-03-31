@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "This pre-commit is testing for shellcheck errors of any added files."
+echo "This pre-commit is testing for shellcheck errors of any .bash file."
 shellcheck *.bash
     if [ $? -ne 0 ] ; then
         exit 1
